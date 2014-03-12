@@ -1,0 +1,29 @@
+<h1>Listing ponds</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Water type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ponds.each do |pond| %>
+      <tr>
+        <td><%= pond.name %></td>
+        <td><%= pond.water_type %></td>
+        <td><%= link_to 'Show', pond %></td>
+        <td><%= link_to 'Edit', edit_pond_path(pond) %></td>
+        <td><%= link_to 'Destroy', pond, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pond', new_pond_path %>

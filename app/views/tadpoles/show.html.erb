@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tadpole.name %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @tadpole.color %>
+</p>
+
+<%= link_to 'Edit', edit_tadpole_path(@tadpole) %> |
+<%= link_to 'Back', tadpoles_path %>
